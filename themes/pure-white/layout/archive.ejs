@@ -1,0 +1,16 @@
+<section class="archive">
+  <h1 class="page-heading"><%= page.title || 'Archive' %></h1>
+  <% page.posts.each(function(post) { %>
+    <% var year = date(post.date, 'YYYY'); %>
+    <% if (year !== currentYear) { %>
+      <h2 class="archive-year"><%= year %></h2>
+      <% currentYear = year; %>
+    <% } %>
+    <div class="archive-item">
+      <time><%= date(post.date, 'MM-DD') %></time>
+      <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+    </div>
+  <% }); %>
+</section>
+
+<%- partial('_partial/pagination') %>

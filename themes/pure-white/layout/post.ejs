@@ -1,0 +1,37 @@
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><%= page.title %></h1>
+    <div class="post-meta">
+      <time><%= date(page.date, 'YYYY-MM-DD') %></time>
+      <% if (page.tags && page.tags.length) { %>
+        <span class="dot">·</span>
+        <% page.tags.each(function(tag) { %>
+          <a class="tag" href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+        <% }); %>
+      <% } %>
+      <% if (page.categories && page.categories.length) { %>
+        <span class="dot">·</span>
+        <% page.categories.each(function(cat) { %>
+          <a class="tag" href="<%= url_for(cat.path) %>"><%= cat.name %></a>
+        <% }); %>
+      <% } %>
+    </div>
+  </header>
+  <div class="post-content">
+    <%- page.content %>
+  </div>
+  <nav class="post-nav">
+    <div class="post-nav-prev">
+      <% if (page.prev) { %>
+        <span class="post-nav-label">← Previous</span>
+        <a href="<%= url_for(page.prev.path) %>"><%= page.prev.title %></a>
+      <% } %>
+    </div>
+    <div class="post-nav-next">
+      <% if (page.next) { %>
+        <span class="post-nav-label">Next →</span>
+        <a href="<%= url_for(page.next.path) %>"><%= page.next.title %></a>
+      <% } %>
+    </div>
+  </nav>
+</article>

@@ -1,0 +1,12 @@
+<header class="header">
+  <div class="header-inner">
+    <a href="<%= url_for('/') %>" class="logo"><%= theme.brand || config.title %></a>
+    <nav class="nav">
+      <% if (theme.menu) { %>
+        <% for (const [label, url] of Object.entries(theme.menu)) { %>
+          <a href="<%= url_for(url) %>" class="nav-link"><%= label %></a>
+        <% } %>
+      <% } %>
+    </nav>
+  </div>
+</header>

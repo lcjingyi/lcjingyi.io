@@ -1,0 +1,20 @@
+# pure-white theme for Hexo
+# Pure white, minimal, content-first design
+
+# Site title in nav
+brand: Blog
+
+# Navigation links
+menu:
+  Archives: /archives
+  Tags: /tags
+
+# Post list
+index:
+  excerpt: true          # Show excerpt on home page
+  excerpt_length: 200    # Auto excerpt length (chars)
+
+# Footer
+footer:
+  since: 2026
+  text: Powered by Hexo
