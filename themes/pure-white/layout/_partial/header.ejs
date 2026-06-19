@@ -4,7 +4,11 @@
     <nav class="nav">
       <% if (theme.menu) { %>
         <% for (const [label, url] of Object.entries(theme.menu)) { %>
-          <a href="<%= url_for(url) %>" class="nav-link"><%= label %></a>
+          <% if (url.startsWith('http')) { %>
+            <a href="<%= url %>" class="nav-link" target="_blank" rel="noopener"><%= label %></a>
+          <% } else { %>
+            <a href="<%= url_for(url) %>" class="nav-link"><%= label %></a>
+          <% } %>
         <% } %>
       <% } %>
     </nav>

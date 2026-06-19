@@ -1,23 +1,16 @@
 <section class="post-list">
+  <% var currentYear = ''; %>
   <% page.posts.each(function(post) { %>
+    <% var year = date(post.date, 'YYYY'); %>
+    <% if (year !== currentYear) { %>
+      <% currentYear = year; %>
+      <h2 class="year-heading"><%= year %></h2>
+    <% } %>
     <article class="post-item">
       <h2 class="post-title">
         <a href="<%= url_for(post.path) %>"><%= post.title %></a>
       </h2>
-      <div class="post-meta">
-        <time><%= date(post.date, 'YYYY-MM-DD') %></time>
-        <% if (post.tags && post.tags.length) { %>
-          <span class="dot">·</span>
-          <% post.tags.each(function(tag) { %>
-            <a class="tag" href="<%= url_for(tag.path) %>"><%= tag.name %></a>
-          <% }); %>
-        <% } %>
-      </div>
-      <% if (theme.index.excerpt && post.excerpt) { %>
-        <div class="post-excerpt"><%= post.excerpt %></div>
-      <% } else if (theme.index.excerpt) { %>
-        <div class="post-excerpt"><%= post.content.substring(0, theme.index.excerpt_length) %></div>
-      <% } %>
+      <time class="post-date"><%= date(post.date, 'MM-DD') %></time>
     </article>
   <% }); %>
 </section>

@@ -6,13 +6,8 @@ brand: Blog
 
 # Navigation links
 menu:
-  Archives: /archives
-  Tags: /tags
-
-# Post list
-index:
-  excerpt: true          # Show excerpt on home page
-  excerpt_length: 200    # Auto excerpt length (chars)
+  Categories: /categories
+  GitHub: https://github.com/lcjingyi
 
 # Footer
 footer:

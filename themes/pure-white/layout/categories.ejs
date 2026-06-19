@@ -1,0 +1,8 @@
+<section class="tags-page">
+  <h1 class="page-heading">Categories</h1>
+  <div class="tag-cloud">
+    <% site.categories.each(function(cat) { %>
+      <a href="<%= url_for(cat.path) %>" class="tag-cloud-item"><%= cat.name %><span class="tag-count"><%= cat.posts.length %></span></a>
+    <% }); %>
+  </div>
+</section>
