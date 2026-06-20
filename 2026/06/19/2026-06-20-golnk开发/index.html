@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoLnk开发 — lcjingyi&#39;s Blog</title>
+<link rel="stylesheet" href="/lcjingyi.io/css/style.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body>
+  <header class="header">
+  <div class="header-inner">
+    <a href="/lcjingyi.io/" class="logo">Blog</a>
+    <nav class="nav">
+      
+        
+          
+            <a href="/lcjingyi.io/categories" class="nav-link">Categories</a>
+          
+        
+          
+            <a href="https://github.com/lcjingyi" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+          
+        
+      
+    </nav>
+  </div>
+</header>
+
+  <main class="main">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">GoLnk开发</h1>
+    <div class="post-meta">
+      <time>2026-06-20</time>
+      
+        <span class="dot">·</span>
+        
+          <a class="tag" href="/lcjingyi.io/tags/Go/">Go</a>
+        
+      
+      
+        <span class="dot">·</span>
+        
+          <a class="tag" href="/lcjingyi.io/categories/%E9%9A%8F%E8%AE%B0/">随记</a>
+        
+      
+    </div>
+  </header>
+  <div class="post-content">
+    <h1 id="GoLnk-—-桌面快捷方式管理工具"><a href="#GoLnk-—-桌面快捷方式管理工具" class="headerlink" title="GoLnk — 桌面快捷方式管理工具"></a>GoLnk — 桌面快捷方式管理工具</h1><blockquote>
+<p>使用 Go + Wails v2 + Vue 3 构建的 Windows 桌面快捷方式管理工具</p>
+</blockquote>
+<h2 id="📋-项目信息"><a href="#📋-项目信息" class="headerlink" title="📋 项目信息"></a>📋 项目信息</h2><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开发语言</td>
+<td>Go 1.24 + Vue 3 (Vite)</td>
+</tr>
+<tr>
+<td>桌面框架</td>
+<td>Wails v2.12.0</td>
+</tr>
+<tr>
+<td>目标平台</td>
+<td>Windows 10&#x2F;11 (amd64)</td>
+</tr>
+<tr>
+<td>构建工具</td>
+<td><code>wails build</code></td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td><code>%APPDATA%/GoLnk/</code> (JSON 文件)</td>
+</tr>
+<tr>
+<td>窗口</td>
+<td>1280×800, 最小 900×600, 暗色背景 #1B2636</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="关键交互"><a href="#关键交互" class="headerlink" title="关键交互"></a>关键交互</h3><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>触发方式</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>打开程序</td>
+<td>点击「▶ 打开」按钮 &#x2F; 右键菜单</td>
+<td>ShellExecuteW 启动</td>
+</tr>
+<tr>
+<td>定位文件</td>
+<td>点击「📂 定位」按钮 &#x2F; 右键菜单</td>
+<td>资源管理器打开</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>鼠标悬停右上角 ✕ &#x2F; 右键菜单</td>
+<td>从缓存移除</td>
+</tr>
+<tr>
+<td>更改分类</td>
+<td>点击分类标签 &#x2F; 右键菜单</td>
+<td>弹出分类选择器</td>
+</tr>
+<tr>
+<td>新建快捷方式</td>
+<td>空白区域右键 &#x2F; 顶部「➕ 新建」按钮</td>
+<td>弹窗填写路径</td>
+</tr>
+<tr>
+<td>管理分类</td>
+<td>顶部「🏷️ 分类」按钮 &#x2F; 空白区域右键</td>
+<td>弹窗增删</td>
+</tr>
+<tr>
+<td>搜索</td>
+<td>顶部搜索框输入</td>
+<td>实时过滤名称+路径</td>
+</tr>
+<tr>
+<td>刷新</td>
+<td>顶部「⟳ 刷新」按钮 &#x2F; 空白区域右键</td>
+<td>重新扫描桌面</td>
+</tr>
+</tbody></table>
+<p>链接：<code>https://github.com/lcjingyi/GoLnk.git</code></p>
+
+  </div>
+  <nav class="post-nav">
+    <div class="post-nav-prev">
+      
+    </div>
+    <div class="post-nav-next">
+      
+        <span class="post-nav-label">Next →</span>
+        <a href="/lcjingyi.io/2026/06/18/2026-06-19-hello/">Hello</a>
+      
+    </div>
+  </nav>
+</article>
+
+  </main>
+  
+</body>
+</html>
